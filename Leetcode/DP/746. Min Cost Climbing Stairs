@@ -1,0 +1,29 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int minCostClimbingStairs(vector<int>& cost) {
+        vector<int>keep;
+        keep.push_back(0);
+        keep.push_back(0);
+        int sz=cost.size();
+        for(int i=2; i<=sz; i++)
+        {
+            keep.push_back(min(keep[i-1]+cost[i-1], keep[i-2]+cost[i-2]));
+
+        }
+        return keep[keep.size()-1];
+
+
+    }
+
+int main()
+{
+    vector<int>v={1, 100, 1, 1, 1, 100, 1, 1, 100, 1};
+    int sz=v.size();
+    cout<<minCostClimbingStairs(v);
+
+
+
+    return 0;
+}
