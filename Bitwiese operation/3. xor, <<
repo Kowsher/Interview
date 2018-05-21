@@ -1,0 +1,13 @@
+Set a bit at ith position 
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int main()
+{
+
+    int a = 10; ///1010
+    int i =2; 
+    int c = a|1<<i; ///1110
+    cout<<c<<endl;
+}
