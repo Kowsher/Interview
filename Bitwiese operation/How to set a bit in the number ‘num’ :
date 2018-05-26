@@ -1,0 +1,16 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+
+int Set(int num, int pos)
+{
+    return num|=1<<pos;
+}
+int main()
+{
+
+    cout<<Set(6,3)<<endl;
+
+
+    return 0;
+}
