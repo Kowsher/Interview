@@ -1,0 +1,13 @@
+int singleNumber(vector<int>& nums) {
+
+        map<int,int>mp={};
+        int sz = nums.size(), i;
+        for(i=0; i<sz; i++)mp[nums[i]]++;
+        for(i=0; i<sz; i++)
+        {
+            if(mp[nums[i]]==1)return nums[i];
+        }
+
+
+
+    }
