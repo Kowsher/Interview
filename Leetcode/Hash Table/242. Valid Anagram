@@ -1,0 +1,18 @@
+ bool isAnagram(string s, string t) {
+
+        map<char, int>mp;
+        
+        if(s.size()!=t.size())return false;
+
+        for(char ch: s)
+        {
+            mp[ch]++;
+        }
+        for(char ch: t)
+        {
+            if(!mp[ch])return false;
+            else mp[ch]--;
+        }
+        return true;
+
+    }
