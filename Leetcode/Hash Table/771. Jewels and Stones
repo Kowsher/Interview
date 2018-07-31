@@ -1,0 +1,15 @@
+int numJewelsInStones(string J, string S){
+
+        unordered_map<char,int>mp;
+        int cnt=0;
+        for(char ch: J)
+        {
+            mp[ch]++;
+        }
+        for(char ch: S)
+        {
+            if(mp[ch])cnt++;
+        }
+        return cnt;
+
+    }
